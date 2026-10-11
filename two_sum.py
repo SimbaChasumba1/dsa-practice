@@ -38,18 +38,20 @@
 
 
 def two_sum(nums, target):
+
     seen = {}
 
     for i, num in enumerate(nums):
-        complement = target - num
 
-        if complement in seen:
-            return [seen[complement], i]
+      complement = target - num
 
-        seen[num] = i
+      if complement in seen:
+       return [seen[complement], i]
+
+      seen[num] = i
 
     return []
-
+ 
 
 # Test cases
 if __name__ == "__main__":
